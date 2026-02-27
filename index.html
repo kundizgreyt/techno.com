@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Техноимпэкс | Современная вентиляция и кондиционирование</title>
-    <!-- Подключаем красивый шрифт Inter и иконки Font Awesome -->
+    <title>Техноимпэкс | Вентиляция и кондиционирование</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
@@ -18,32 +17,30 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f4f7fb; /* очень светлый фон */
-            color: #1a2b3c;
+            background-color: #F5F7FF;
+            color: #2D3A4A;
             line-height: 1.5;
         }
 
-        /* Новая цветовая гамма: благородный серо-голубой + мягкий аквамарин для акцентов */
+        /* Цветовая палитра на основе вашего синего #171796 */
         :root {
-            --primary-dark: #1c3b4f;      /* глубокий сине-серый (основа) */
-            --primary-soft: #eef3f9;      /* фон хедера и карточек */
-            --accent: #2c9a8c;            /* спокойный аквамарин (кнопки, иконки) */
-            --accent-hover: #238076;       /* чуть темнее для наведения */
-            --text-dark: #1a2b3c;
-            --text-soft: #4a5f73;
-            --white-pure: #ffffff;
-            --border-light: #dde5ed;
+            --primary-deep: #171796;      
+            --primary-dark: #0A0A4F;       
+            --bg-light: #F5F7FF;           
+            --text-main: #2D3A4A;          
+            --border-soft: #DCE3EC;        
+            --white-pure: #FFFFFF;
         }
 
-        /* Шапка сайта (Header) — чистая, современная */
+        /* Шапка сайта */
         .header {
             background-color: var(--white-pure);
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-soft);
             padding: 0.8rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 15px rgba(23,23,150,0.05);
         }
 
         .container {
@@ -59,7 +56,7 @@
             flex-wrap: wrap;
         }
 
-        /* Логотип полностью сохранён — только цвет букв подогнан под гамму */
+        /* Логотип */
         .logo-block {
             display: flex;
             align-items: center;
@@ -70,23 +67,23 @@
             font-weight: 800;
             font-size: 2rem;
             line-height: 1.2;
-            color: var(--primary-dark);  /* цвет логотипа стал глубже, но форма та же */
+            color: var(--primary-dark);
             letter-spacing: -0.5px;
         }
         .logo-img span {
-            color: var(--accent);         /* акцентная буква, стильно */
+            color: var(--primary-deep);
         }
         .logo-year {
             font-size: 0.85rem;
             font-weight: 500;
-            color: var(--text-soft);
+            color: var(--text-main);
             margin-left: 5px;
-            background: #eef2f6;
+            background: var(--bg-light);
             padding: 4px 8px;
             border-radius: 30px;
         }
 
-        /* Навигационное меню */
+        /* Навигация */
         .nav-menu {
             display: flex;
             gap: 2rem;
@@ -94,15 +91,15 @@
         }
         .nav-menu a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-main);
             font-size: 1rem;
             transition: color 0.2s;
         }
         .nav-menu a:hover {
-            color: var(--accent);
+            color: var(--primary-deep);
         }
 
-        /* Контактный блок справа */
+        /* Контактный блок */
         .contact-header {
             display: flex;
             align-items: center;
@@ -124,22 +121,22 @@
             justify-content: center;
             width: 36px;
             height: 36px;
-            background: var(--primary-soft);
+            background: var(--bg-light);
             border-radius: 50%;
-            color: var(--primary-dark);
+            color: var(--primary-deep);
             font-size: 1.1rem;
             transition: all 0.2s;
             text-decoration: none;
         }
         .social-icons a:hover {
-            background: var(--accent);
+            background: var(--primary-deep);
             color: white;
             transform: scale(1.08);
         }
 
-        /* CTA-кнопка "Заказать звонок" — визуально акцентирована */
+        /* CTA-кнопка */
         .cta-button {
-            background: var(--accent);
+            background: var(--primary-deep);
             color: white;
             border: none;
             padding: 0.65rem 1.4rem;
@@ -148,7 +145,7 @@
             font-size: 0.95rem;
             cursor: pointer;
             transition: 0.25s;
-            box-shadow: 0 6px 14px rgba(44, 154, 140, 0.3);
+            box-shadow: 0 6px 14px rgba(23, 23, 150, 0.3);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -158,17 +155,17 @@
             font-size: 1rem;
         }
         .cta-button:hover {
-            background: var(--accent-hover);
-            box-shadow: 0 10px 20px rgba(44, 154, 140, 0.4);
+            background: var(--primary-dark);
+            box-shadow: 0 10px 20px rgba(23, 23, 150, 0.4);
             transform: translateY(-2px);
         }
 
-        /* POPUP (окно обратного звонка) — скрыто по умолчанию */
+        /* POPUP */
         .popup-overlay {
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.3);
+            background: rgba(10,10,79,0.3);
             backdrop-filter: blur(4px);
             justify-content: center;
             align-items: center;
@@ -180,7 +177,7 @@
             width: 90%;
             padding: 2.2rem 2rem;
             border-radius: 48px;
-            box-shadow: 0 30px 50px rgba(0,40,60,0.3);
+            box-shadow: 0 30px 50px rgba(10,10,79,0.3);
             text-align: center;
         }
         .popup-card h3 {
@@ -190,7 +187,7 @@
             margin-bottom: 0.5rem;
         }
         .popup-card p {
-            color: var(--text-soft);
+            color: var(--text-main);
             margin-bottom: 1.8rem;
         }
         .input-group {
@@ -199,12 +196,12 @@
         }
         .input-group label {
             font-weight: 500;
-            color: var(--text-dark);
+            color: var(--text-main);
         }
         .input-group input {
             width: 100%;
             padding: 0.9rem 1.2rem;
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--border-soft);
             border-radius: 60px;
             font-size: 1rem;
             margin-top: 5px;
@@ -212,8 +209,8 @@
             transition: 0.2s;
         }
         .input-group input:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(44,154,140,0.2);
+            border-color: var(--primary-deep);
+            box-shadow: 0 0 0 3px rgba(23, 23, 150, 0.2);
         }
         .popup-card .cta-button {
             width: 100%;
@@ -231,10 +228,10 @@
             text-decoration: underline;
         }
 
-        /* Главный экран (Hero) — полностью переработан */
+        /* Hero секция */
         .hero {
             padding: 3rem 0 4rem;
-            background: linear-gradient(145deg, #ffffff 0%, #f1f7fd 100%);
+            background: linear-gradient(145deg, #FFFFFF 0%, var(--bg-light) 100%);
         }
         .hero .container {
             display: flex;
@@ -253,11 +250,11 @@
             margin-bottom: 1.5rem;
         }
         .hero-text h1 span {
-            color: var(--accent);
+            color: var(--primary-deep);
         }
         .hero-desc {
             font-size: 1.2rem;
-            color: var(--text-soft);
+            color: var(--text-main);
             margin-bottom: 2rem;
             max-width: 500px;
         }
@@ -273,25 +270,26 @@
             color: var(--primary-dark);
         }
         .stat-label {
-            color: var(--text-soft);
+            color: var(--text-main);
             font-weight: 400;
         }
         .hero-image {
             flex: 1 1 350px;
-            background: #dee9f2;
+            background: var(--border-soft);
             border-radius: 60px;
             padding: 1.5rem;
             min-height: 280px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #3d5d78;
+            color: var(--primary-dark);
             font-size: 1.2rem;
-            background-image: radial-gradient(circle at 20px 20px, #cbd7e6 2px, transparent 2px), 
-            linear-gradient(to right, #cddbe9, #dee9f2);
+            background-image: radial-gradient(circle at 20px 20px, #c5d2e2 2px, transparent 2px), 
+            linear-gradient(to right, #d1deec, #dee9f5);
             background-size: 40px 40px, 100%;
         }
-        /* Каталог на главной — сетка */
+
+        /* Секция каталога */
         .catalog-grid {
             padding: 4rem 0;
             background: white;
@@ -308,7 +306,7 @@
             gap: 1.2rem;
         }
         .cat-item {
-            background: var(--primary-soft);
+            background: var(--bg-light);
             border-radius: 30px;
             padding: 1.5rem 1rem;
             text-align: center;
@@ -318,18 +316,130 @@
             border: 1px solid transparent;
         }
         .cat-item:hover {
-            border-color: var(--accent);
+            border-color: var(--primary-deep);
             background: white;
-            box-shadow: 0 12px 24px -12px rgba(44,154,140,0.4);
+            box-shadow: 0 12px 24px -12px rgba(23,23,150,0.4);
             transform: translateY(-3px);
         }
         .cat-item i {
-            color: var(--accent);
+            color: var(--primary-deep);
             font-size: 2.2rem;
             margin-bottom: 0.8rem;
         }
 
-        /* Подвал (для полноты) */
+        /* НОВЫЙ РАЗДЕЛ: О НАС */
+        .about-section {
+            padding: 5rem 0;
+            background: var(--white-pure);
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .about-flex {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .about-content {
+            flex: 2 1 400px;
+        }
+        .about-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+        .about-content h2 span {
+            color: var(--primary-deep);
+        }
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .about-highlight {
+            background: var(--bg-light);
+            padding: 1.8rem;
+            border-radius: 32px;
+            margin: 2rem 0;
+            border-left: 6px solid var(--primary-deep);
+        }
+        .about-highlight p {
+            font-style: italic;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+        .about-highlight .author {
+            color: var(--primary-deep);
+            font-weight: 600;
+        }
+        .about-stats-mini {
+            display: flex;
+            gap: 2.5rem;
+            margin: 2rem 0;
+        }
+        .stat-mini-item {
+            text-align: center;
+        }
+        .stat-mini-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-deep);
+        }
+        .stat-mini-label {
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+        .about-image {
+            flex: 1 1 300px;
+            background: var(--border-soft);
+            border-radius: 50px;
+            padding: 2rem;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(145deg, #e2eaf5, #ccd9ea);
+            box-shadow: 0 20px 30px -10px rgba(23,23,150,0.2);
+        }
+        .about-image i {
+            font-size: 5rem;
+            color: var(--primary-deep);
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+        .about-image p {
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+
+        /* Преимущества (дочерний блок, если нужно) */
+        .values-row {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .value-item {
+            flex: 1 1 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .value-item i {
+            font-size: 2.2rem;
+            color: var(--primary-deep);
+            margin-bottom: 0.8rem;
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 60%;
+        }
+
+        /* Футер */
         .footer {
             background: var(--primary-dark);
             color: #d0e0ec;
@@ -345,16 +455,13 @@
 </head>
 <body>
 
-<!-- НОВАЯ ШАПКА САЙТА (Header) -->
+<!-- ШАПКА -->
 <header class="header">
     <div class="container">
-        <!-- Логотип полностью сохранён (Technoimpex, 1994) в той же стилистике -->
         <div class="logo-block">
             <div class="logo-img">Technoimpex® <span>ТЕХНОИМПЭКС</span></div>
             <span class="logo-year">1994</span>
         </div>
-
-        <!-- Навигация -->
         <nav class="nav-menu">
             <a href="#">КАТАЛОГ</a>
             <a href="#">ДОСТАВКА</a>
@@ -363,27 +470,24 @@
             <a href="#">БЛОГ</a>
             <a href="#">КОНТАКТЫ</a>
         </nav>
-
-        <!-- Контактная зона: телефон, иконки, CTA кнопка (вместо HOTCOOL) -->
         <div class="contact-header">
-            <a href="tel:+375171234567" class="phone-number"><i class="fas fa-phone-alt" style="color: var(--accent); margin-right: 5px;"></i> +375 17 123-45-67</a>
+            <a href="tel:+375171234567" class="phone-number"><i class="fas fa-phone-alt" style="color: var(--primary-deep);"></i> +375 17 123-45-67</a>
             <div class="social-icons">
-                <a href="#" aria-label="Viber"><i class="fab fa-viber"></i></a>
-                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" aria-label="Звонок"><i class="fas fa-phone"></i></a>
+                <a href="#"><i class="fab fa-viber"></i></a>
+                <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fas fa-phone"></i></a>
             </div>
-            <!-- Кнопка вызова попапа (CTA) -->
             <button class="cta-button" id="callOrderBtn"><i class="fas fa-phone-alt"></i> Заказать звонок</button>
         </div>
     </div>
 </header>
 
-<!-- POPUP Обратный звонок (появляется по нажатию) -->
+<!-- POPUP (обратный звонок) -->
 <div class="popup-overlay" id="callbackPopup">
     <div class="popup-card">
         <h3>Обратный звонок</h3>
-        <p>Оставьте имя и номер — мы перезвоним вам за 30 секунд</p>
+        <p>Оставьте имя и номер — мы перезвоним за 30 секунд</p>
         <div class="input-group">
             <label>Ваше имя</label>
             <input type="text" placeholder="Александр" id="popupName">
@@ -397,7 +501,7 @@
     </div>
 </div>
 
-<!-- Главный экран (Hero) — полностью обновлён, изменён "потолок" -->
+<!-- HERO -->
 <section class="hero">
     <div class="container">
         <div class="hero-text">
@@ -408,18 +512,16 @@
                 <div class="stat-item"><span class="stat-number">5000+</span> <span class="stat-label">объектов</span></div>
             </div>
             <div style="margin-top: 2rem;">
-                <button class="cta-button" style="padding: 1rem 2.5rem;" id="callOrderBtn2"><i class="fas fa-phone-alt"></i> Получить консультацию</button>
+                <button class="cta-button" id="callOrderBtn2"><i class="fas fa-phone-alt"></i> Получить консультацию</button>
             </div>
         </div>
         <div class="hero-image">
-            <i class="fas fa-wind" style="font-size: 6rem; color: #376683; opacity: 0.5;"></i>
-            <p style="margin-left: 1rem;">Современные решения</p>
-            <!-- здесь мог бы быть слайдер, но для примера абстрактная графика -->
+            <i class="fas fa-wind" style="font-size: 6rem; color: var(--primary-deep); opacity: 0.7;"></i>
         </div>
     </div>
 </section>
 
-<!-- Каталог (краткий) чтобы показать структуру -->
+<!-- КАТАЛОГ (кратко) -->
 <section class="catalog-grid">
     <div class="container">
         <h2 class="section-title">Каталог оборудования</h2>
@@ -434,7 +536,60 @@
     </div>
 </section>
 
-<!-- Подвал (для завершённости) -->
+<!-- НОВЫЙ РАЗДЕЛ: О НАС -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-flex">
+            <div class="about-content">
+                <h2>О компании <span>Техноимпэкс</span></h2>
+                <p class="about-text">С 1994 года мы создаём комфортный микроклимат для промышленных объектов, офисов и частных домов по всей Беларуси. Начинав с поставок простого вентиляционного оборудования, сегодня мы — эксперты в области комплексных решений для вентиляции и кондиционирования.</p>
+                
+                <div class="about-highlight">
+                    <p>«Нет на земле темы важнее, чем климат» — Кристиана Фигуэрес. Для нас это не просто слова, а философия работы. Каждый проект мы начинаем с расчёта воздухообмена и заканчиваем гарантийным обслуживанием.</p>
+                </div>
+
+                <div class="values-row">
+                    <div class="value-item">
+                        <i class="fas fa-award"></i>
+                        <strong>30 лет опыта</strong>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-tools"></i>
+                        <strong>Собственный монтаж</strong>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <strong>Гарантия до 5 лет</strong>
+                    </div>
+                </div>
+
+                <div class="about-stats-mini">
+                    <div class="stat-mini-item">
+                        <div class="stat-mini-number">500+</div>
+                        <div class="stat-mini-label">реализованных проектов</div>
+                    </div>
+                    <div class="stat-mini-item">
+                        <div class="stat-mini-number">15</div>
+                        <div class="stat-mini-label">сертифицированных инженеров</div>
+                    </div>
+                    <div class="stat-mini-item">
+                        <div class="stat-mini-number">7</div>
+                        <div class="stat-mini-label">городов присутствия</div>
+                    </div>
+                </div>
+
+                <button class="cta-button" id="callOrderBtn3" style="margin-top: 1rem;"><i class="fas fa-envelope"></i> Связаться с нами</button>
+            </div>
+            <div class="about-image">
+                <i class="fas fa-building"></i>
+                <p>Команда Техноимпэкс</p>
+                <p style="font-size: 0.9rem;">(фото производства/офиса)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ФУТЕР -->
 <footer class="footer">
     <div class="container">
         <div>© 1994–2026 ООО фирма «Техноимпэкс»</div>
@@ -443,12 +598,13 @@
     </div>
 </footer>
 
-<!-- Скрипт для работы попапа -->
+<!-- СКРИПТ (попап) -->
 <script>
     (function() {
         const popup = document.getElementById('callbackPopup');
         const openBtn = document.getElementById('callOrderBtn');
         const openBtn2 = document.getElementById('callOrderBtn2');
+        const openBtn3 = document.getElementById('callOrderBtn3');
         const closeBtn = document.getElementById('closePopupBtn');
         const submitBtn = document.getElementById('submitCallback');
 
@@ -461,16 +617,16 @@
 
         if (openBtn) openBtn.addEventListener('click', openPopup);
         if (openBtn2) openBtn2.addEventListener('click', openPopup);
+        if (openBtn3) openBtn3.addEventListener('click', openPopup);
         if (closeBtn) closeBtn.addEventListener('click', closePopup);
         
-        // Отправка формы (имитация)
         if (submitBtn) {
             submitBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 const name = document.getElementById('popupName').value;
                 const phone = document.getElementById('popupPhone').value;
                 if (name && phone) {
-                    alert('Спасибо, ' + name + '! Мы скоро перезвоним вам по номеру ' + phone);
+                    alert('Спасибо, ' + name + '! Мы перезвоним вам по номеру ' + phone);
                     closePopup();
                 } else {
                     alert('Пожалуйста, заполните имя и номер');
@@ -478,13 +634,10 @@
             });
         }
 
-        // Закрытие по клику вне попапа
         window.addEventListener('click', function(e) {
             if (e.target === popup) closePopup();
         });
     })();
 </script>
-
-<!-- Небольшая имитация современности: плавный скролл, hover-эффекты уже в css -->
 </body>
 </html>
